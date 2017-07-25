@@ -13,7 +13,7 @@ namespace Xamarin_Divisas
         {
             InitializeComponent();
 
-            MainPage = new Xamarin_Divisas.MainPage();
+            MainPage = new NavigationPage (new Xamarin_Divisas.MainPage());
         }
 
         protected override void OnStart()

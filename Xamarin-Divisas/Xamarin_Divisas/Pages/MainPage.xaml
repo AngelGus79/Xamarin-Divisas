@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Xamarin_Divisas"
+             x:Class="Xamarin_Divisas.MainPage"
+             Title="Divisas"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <StackLayout Padding="8">
+        <Label Text="Pesos" />
+        <Entry Placeholder="Escriba el valor en Pesos..."
+               Keyboard="Numeric"
+               Text="{Binding Pesos, Mode=TwoWay}"/>
+        
+        <Button Text="Convertir"
+                BackgroundColor="Navy"
+                TextColor="White"
+                HeightRequest="40"
+                BorderRadius="20"
+                Command="{Binding ConvertCommand}">
+            
+        </Button>
+        <Label Text="Dólares: " />
+        <Entry IsEnabled="False" Placeholder="Valor en Dólares" Text="{Binding Dolares, StringFormat='${0:N2}'}" HorizontalTextAlignment="End" />
+        <Label Text="Euros: " />
+        <Entry IsEnabled="False" Placeholder="Valor en Euros" Text="{Binding Euros,StringFormat='${0:N2}'}" HorizontalTextAlignment="End"/>
+        <Label Text="Yenes: " />
+        <Entry IsEnabled="False" Placeholder="Valor en Yenes" Text="{Binding Yenes,StringFormat='${0:N2}'}" HorizontalTextAlignment="End"/>
+    </StackLayout>
+
+</ContentPage>
